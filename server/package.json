@@ -1,32 +1,48 @@
 {
-  "name": "backend",
+  "name": "fs-starter",
   "version": "1.0.0",
-  "description": "MEN",
-  "main": "server.js",
+  "description": "MEN stuff",
+  "main": "index.js",
   "scripts": {
-    "build": "webpack",
-    "start-server": "nodemon dist/main.js",
-    "watcher": "webpack --watch"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manavm1990/fs-starter.git"
   },
   "keywords": [
-    "MongoDB",
-    "Express",
-    "Node"
+    "mongodb",
+    "expressjs",
+    "nodejs"
   ],
-  "author": "Manav Misra",
+  "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manavm1990/fs-starter/issues"
+  },
+  "homepage": "https://github.com/manavm1990/fs-starter#readme",
+  "devDependencies": {
+    "eslint": "^7.9.0",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
+    "nodemon": "^2.0.4",
+    "prettier": "2.1.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "mongodb": "^3.5.9"
+    "mongodb": "^3.6.2"
   },
-  "devDependencies": {
-    "eslint": "^7.7.0",
-    "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-plugin-import": "^2.22.0",
-    "nodemon": "^2.0.4",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.12"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
   }
 }
