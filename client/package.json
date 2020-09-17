@@ -12,10 +12,11 @@
     "css",
     "js"
   ],
-  "author": "",
+  "author": "Manav Misra",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^7.9.0",
+    "eslint-plugin-jest": "^24.0.1",
     "husky": "^4.3.0",
     "lint-staged": "^10.4.0",
     "prettier": "2.1.2",
