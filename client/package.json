@@ -15,6 +15,7 @@
   "author": "Manav Misra",
   "license": "ISC",
   "devDependencies": {
+    "browser-sync": "^2.26.12",
     "eslint": "^7.9.0",
     "eslint-plugin-jest": "^24.0.1",
     "husky": "^4.3.0",
