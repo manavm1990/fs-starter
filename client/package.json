@@ -1,32 +1,31 @@
 {
-  "env": {
-    "browser": true,
-    "es6": true,
-    "node": true
+  "name": "client",
+  "version": "1.0.0",
+  "description": "All JS in this folder is meant to run in the browser.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "extends": [
-    "airbnb-base"
-  ],
-  "globals": {
-    "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.9.0",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
+    "prettier": "2.1.2",
+    "stylelint": "^13.7.1",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.1.0"
   },
-  "parserOptions": {
-    "ecmaVersion": 2018,
-    "sourceType": "module"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
-  "plugins": [
-    "jest"
-  ],
-  "rules": {
-    "array-callback-return": "warn",
-    "import/prefer-default-export": "off",
-    "jest/no-disabled-tests": "warn",
-    "jest/no-focused-tests": "error",
-    "jest/no-identical-title": "error",
-    "jest/prefer-to-have-length": "warn",
-    "jest/valid-expect": "error",
-    "no-confusing-arrow": "off",
-    "no-unused-vars": "warn"
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.css": "stylelint --fix",
+    "*.{js,css,md}": "prettier --write"
   }
 }
