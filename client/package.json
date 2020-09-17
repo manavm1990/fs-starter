@@ -4,7 +4,8 @@
   "description": "All JS in this folder is meant to run in the browser.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "browser-sync start --server --files '*.html, *.css, *.js'",
+    "test": "jest"
   },
   "keywords": [
     "html",
