@@ -6,3 +6,5 @@
 
 # For Mac OS X
 .DS_Store
+
+.eslintcache
